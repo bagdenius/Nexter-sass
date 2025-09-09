@@ -1,6 +1,62 @@
 @use './base' as *;
 
 .footer {
-  background-color: $color-secondary;
   grid-column: full-start / full-end;
+  padding: 8rem;
+  background-color: $color-secondary;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+
+  &__link:link,
+  &__link:visited {
+    display: block;
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    color: #fff;
+    text-decoration: none;
+    font-family: $font-display;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.2s;
+  }
+
+  &__link:hover {
+    background-color: rgba(#fff, 0.05);
+    transform: translateY(-3px);
+  }
+
+  &__link:active {
+    background-color: rgba(#fff, 0.08);
+    transform: translateY(-1px);
+  }
+}
+
+.copyright {
+  font-size: 1.4rem;
+  color: $color-grey-light-2;
+  margin: 6rem auto 0 auto;
+  text-align: center;
+  width: 70%;
+
+  &__link:link,
+  &__link:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: currentColor;
+    background-color: $color-secondary;
+    box-shadow: none;
+    transition: all 0.2s;
+  }
+
+  &__link:hover {
+    transform: scale(1.3) rotate(2deg);
+    background-color: lighten($color-secondary, 3%);
+    box-shadow: 0 1rem 3rem rgba(#000, 0.2);
+  }
 }
