@@ -3,10 +3,14 @@
 .features {
   display: grid;
   grid-column: center-start / center-end;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   align-items: start;
   margin: 15rem 0;
   gap: 6rem;
+
+  @media only screen and (max-width: $bp-xl) {
+    margin: 8rem 0;
+  }
 }
 
 .feature {
