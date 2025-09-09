@@ -1,6 +1,31 @@
 @use './base' as *;
 
 .realtors {
-  background-color: $color-secondary;
   grid-column: col-start 7 / full-end;
+  background-color: $color-secondary;
+  display: grid;
+  justify-items: center;
+  place-content: center;
+  row-gap: 2rem;
+  padding: 3rem;
+  margin-left: -1.5px; // header background overlapping crutch fix
+
+  &__list {
+    display: grid;
+    grid-template-columns: min-content max-content;
+    gap: 5dvh 2rem;
+    align-items: center;
+  }
+
+  &__img {
+    display: block;
+    width: 7rem;
+    border-radius: 50%;
+  }
+
+  &__sold {
+    margin-top: -3px;
+    text-transform: uppercase;
+    color: $color-grey-light-2;
+  }
 }
